@@ -1,0 +1,33 @@
+\documentclass[a5paper,12pt]{extarticle}
+\special{papersize=148mm,210mm}% it is A5 paper size, I got from Wikipedia.
+\usepackage{fontspec} % XeTeX
+\usepackage{xunicode} % Unicode для XeTeX
+\usepackage{xltxtra}  % Верхние и нижние индексы
+\usepackage{pdfpages} % Вставка PDF
+
+% Русский язык
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\setotherlanguage{english}
+\usepackage{indentfirst} % Красная строка после заголовка
+\renewcommand{\baselinestretch}{1.1}
+
+% Шрифты, xelatex
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{CMU Serif}
+
+% Геометрия страницы
+\usepackage{geometry}
+\geometry{left=2cm}
+\geometry{right=1cm}
+\geometry{top=2cm}
+\geometry{bottom=2cm}
+
+% Отключение номеров формул
+\usepackage{mathtools}  
+\mathtoolsset{showonlyrefs}  
+
+% Списки
+\usepackage{enumitem}
+\setlist{nolistsep} % Нет отступов между пунктами списка
+\renewcommand{\labelitemi}{--}
