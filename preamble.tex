@@ -15,6 +15,7 @@
 % Шрифты, xelatex
 \defaultfontfeatures{Ligatures=TeX}
 \setmainfont{CMU Serif}
+\newfontfamily{\cyrillicfonttt}{Menlo}
 
 % Геометрия страницы
 \usepackage{geometry}
@@ -30,4 +31,23 @@
 % Списки
 \usepackage{enumitem}
 \setlist{nolistsep} % Нет отступов между пунктами списка
-\renewcommand{\labelitemi}{--}
+\renewcommand{\labelitemi}{•}
+\usepackage{float} % Расширенное управление плавающими объектами
+
+%Формулы
+\usepackage{amsmath}
+\usepackage[makeroom]{cancel}
+
+%Код
+\usepackage{listings} 
+\lstset{
+	language=C++,
+    basicstyle=\scriptsize\linespread{0.94}\ttfamily, % Размер и тип шрифта
+    breaklines=true, % Перенос строк
+    tabsize=2, % Размер табуляции
+    literate={--}{{-{}-}}2 % Корректно отображать двойной дефис
+}
+
+% Пути к каталогам с изображениями
+\usepackage{graphicx} % Вставка картинок и дополнений
+\graphicspath{{illustrations/}}
